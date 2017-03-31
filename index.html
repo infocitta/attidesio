@@ -98,7 +98,7 @@
 
 <div class="list-group">
 
-<a dir-paginate="item in items | itemsPerPage: pageSize" current-page="currentPage"  ng-href="{{ item.LINK }}\" class="list-group-item"><p>{{ item.ID }}</p><span><strong>{{ item.OGGETTO }}</strong></span></a>
+<a dir-paginate="item in items | itemsPerPage: pageSize" current-page="currentPage"  ng-href="{{ item.LINK }}\" class="list-group-item"><p>Registro: {{ item.NUM_REGISTRO }} Atto: {{ item.NUM_ATTO }}</p><span><strong>{{ item.TIPO }}</strong></span><span>{{ item.OGGETTO }}</span></a>
 
 </div>
 		  
