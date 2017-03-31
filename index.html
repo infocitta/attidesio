@@ -84,8 +84,13 @@
         <div ng-controller="MyController" class="my-controller">
           <div class="row">
             <div class="col-xs-8">
-              <label for="search">Ricerca:</label>
-              <input ng-model="q" id="search" class="form-control" placeholder="Testo ricerca">
+			<label for="Ricerca">Ricerca</label>
+			<div class="input-group">
+				<input type="text" class="form-control" id="Ricerca" ng-model="c.Value">
+				<span class="input-group-btn">
+					<button class="btn btn-info" ng-click="Ricerca">Ricerca</button>
+				</span>
+			</div>
             </div>
 
           </div>
@@ -93,7 +98,7 @@
 
 <div class="list-group">
 
-<a dir-paginate="item in items | orderBy:'OGGETTO' | filter:q | itemsPerPage: pageSize" current-page="currentPage"  ng-href="{{ item.LINK }}\" class="list-group-item"><span><strong>{{ item.OGGETTO }}</strong></span></a>
+<a dir-paginate="item in items | | | itemsPerPage: pageSize" current-page="currentPage"  ng-href="{{ item.LINK }}\" class="list-group-item"><p>{{ item.ID }}</p><span><strong>{{ item.OGGETTO }}</strong></span></a>
 
 </div>
 		  
