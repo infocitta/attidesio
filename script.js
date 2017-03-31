@@ -8,7 +8,7 @@ function MyController($scope, $http) {
   $scope.pageSize = 20;
   $scope.items = [];
 
- $http.get("https://www.ipersoft.it/desio/storicoattijson")
+ $http.jsonp("https://www.ipersoft.it/desio/storicoattijson")
     .then(function(response) {
         $scope.items = response.data;
     });
