@@ -14,10 +14,10 @@ function MyController($scope, $http) {
     });
 	
 $scope.Ricerca=function () {
-		console.log("prova");
-		alert("Esecuzione");
- 	alert('https://www.ipersoft.it/desio/storicoattijson?oggetto=' + $scope.CasellaRicerca);
-$http.get("https://www.ipersoft.it/desio/storicoattijson?oggetto=" + $scope.CasellaRicerca)
+
+url="https://www.ipersoft.it/desio/storicoattijson?oggetto=" + $scope.CasellaRicerca
+console.log(url);
+$http.get(url)
     .then(function(response) {
         $scope.items = response.data;
     });
