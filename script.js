@@ -13,6 +13,12 @@ function MyController($scope, $http) {
         $scope.items = response.data;
     });
 	
+$scope.Ricerca=function () {
+$http.get("https://www.ipersoft.it/desio/storicoattijson?oggetto=" + $scope.CasellaRicerca)
+    .then(function(response) {
+        $scope.items = response.data;
+    });
+}
 	
   $scope.pageChangeHandler = function(num) {
       
