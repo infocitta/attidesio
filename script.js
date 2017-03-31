@@ -14,7 +14,8 @@ function MyController($scope, $http) {
     });
 	
 $scope.Ricerca=function () {
-		alert('Prova');
+		console.log("prova");
+		alert("Esecuzione");
  	alert('https://www.ipersoft.it/desio/storicoattijson?oggetto=' + $scope.CasellaRicerca);
 $http.get("https://www.ipersoft.it/desio/storicoattijson?oggetto=" + $scope.CasellaRicerca)
     .then(function(response) {
