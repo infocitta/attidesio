@@ -99,7 +99,7 @@
 
 <div class="list-group">
 
-<a dir-paginate="item in items | itemsPerPage: pageSize" current-page="currentPage"  ng-href="{{ item.LINK }}\" class="list-group-item"><p>Registro: {{ item.NUM_REGISTRO }} Atto: {{ item.NUM_ATTO }}</p><p><span><strong>{{ item.TIPO }}</strong></span></p><p><span>{{ item.OGGETTO }}</span></p><p>Data pubblicazione {{ item.DATAPUB | date:'dd/MM/yyyy' }}</p></a>
+<a dir-paginate="item in items | itemsPerPage: pageSize" current-page="currentPage"  ng-href="http://desio.trasparenza-valutazione-merito.it/web/albo/storico-atti/-/papca/display/{{ item.ID }}" class="list-group-item"><p>Registro: {{ item.REG_ANNO }}/{{ item.REG_NUM }} Atto: {{ item.ATTO_ANNO }}/{{ item.ATTO_NUM }}</p><p><span><strong>{{ item.SOTTOCATEGORIA }}</strong></span></p><p><span>{{ item.OGGETTO }}</span></p><p>Data pubblicazione {{ item.DATAPUB | date:'dd/MM/yyyy' }}</p></a>
 
 </div>
 		  
