@@ -8,14 +8,14 @@ function MyController($scope, $http) {
   $scope.pageSize = 5;
   $scope.items = [];
 
- $http.get("https://www.ipersoft.it/desio/storicoattijson")
+ $http.get("https://www.ipersoft.it/desio/storicoattidettjson")
     .then(function(response) {
         $scope.items = response.data;
     });
 	
 $scope.Ricerca=function () {
 
-url="https://www.ipersoft.it/desio/storicoattijson?oggetto=" + $scope.CasellaRicerca
+url="https://www.ipersoft.it/desio/storicoattidettjson?oggetto=" + $scope.CasellaRicerca
 console.log(url);
 $http.get(url)
     .then(function(response) {
